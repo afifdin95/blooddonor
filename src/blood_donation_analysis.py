@@ -76,7 +76,7 @@ def generate_analysis(donations_by_state, granular_df, newdonors_by_state):
     yearly_tot_donor = yearly_tot_donor.rename(columns = {'donor_id':'total_donors'})
     yearly_rep_donor = yearly_rep_donor.rename(columns = {'donor_id':'rep_donors'})
     yearly_retention = pd.merge(yearly_tot_donor, yearly_rep_donor, on='visit_year')
-    yearly_retention['retention_rate'] = yearly_retention['rep_donors'] / yearly_retention['total_donors']
+    yearly_retention['retention_rate'] = yearly_retention['rep_donors'] / yearly_retention['total_donors'] * 100
     yearly_retention = yearly_retention[(yearly_retention['visit_year'] != curr_year)]
     yearly_retention.plot(x='visit_year', y='retention_rate', legend=False)
     plt.xlabel("Year")
