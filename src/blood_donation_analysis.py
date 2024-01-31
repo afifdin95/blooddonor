@@ -17,8 +17,8 @@ DATA_FILES = [
 ]
 PARQUET_URL = 'https://dub.sh/ds-data-granular'
 
-TELEGRAM_BOT_TOKEN = '6896979483:AAEeiILNqn2VO84QClCrPDYZk90S7UUsnmI'
-TELEGRAM_GROUP_CHAT_ID = '-4175502096'
+TELEGRAM_BOT_TOKEN = 'xxxxxxx'
+TELEGRAM_GROUP_CHAT_ID = 'xxxxxxx'
 
 # Download data from GitHub
 def download_data(file):
